@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>chsobin</display-name>
+  <welcome-file-list>
+    <welcome-file>indexServlet</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>Encoding</filter-name>
+    <filter-class>filter.CharEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/NewsManage/*</url-pattern>
+    <url-pattern>/UserManage/*</url-pattern>
+    <url-pattern>/UserCenter.jsp</url-pattern>
+    <url-pattern>/ChangeUserStatusServlet</url-pattern>
+    <url-pattern>/CheckNews</url-pattern>
+    <url-pattern>/CommentManageServlet</url-pattern>
+    <url-pattern>/DeleteNewsServlet</url-pattern>
+    <url-pattern>/deletUserServlet</url-pattern>
+    <url-pattern>/EditNewsServlet</url-pattern>
+    <url-pattern>/LogoutServlet</url-pattern>
+    <url-pattern>/NewsManageServlet</url-pattern>
+    <url-pattern>/PublishNewsServlet</url-pattern>
+   	<url-pattern>/StatisticServlet</url-pattern>
+    <url-pattern>/UserDataManageServlet</url-pattern>
+    <url-pattern>/UserManageServlet</url-pattern>
+    <url-pattern></url-pattern>
+  </filter-mapping>
+</web-app>
